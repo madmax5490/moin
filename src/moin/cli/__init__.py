@@ -16,6 +16,7 @@ from moin.app import create_app
 from moin.cli.maint import create_instance, index, modify_item, set_meta, serialization, reduce_revisions, dump_html
 from moin.cli.account import create, disable, resetpw
 from moin.cli.migration.moin19 import import19
+from moin.cli.search import search_text
 
 from moin import log
 
@@ -95,3 +96,5 @@ cli.add_command(modify_item.cli_LoadWelcome)
 cli.add_command(modify_item.cli_ValidateMetadata)
 
 cli.add_command(import19.ImportMoin19)
+
+cli.add_command(search_text)
